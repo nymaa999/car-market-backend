@@ -21,6 +21,13 @@ app_license = "mit"
 # 	}
 # ]
 
+fixtures = [
+    {"dt": "Car Brand"},
+    {"dt": "Car Model"},
+    {"dt": "Car Condition"},
+    {"dt": "Seller Profile"},
+]
+
 # Includes in <head>
 # ------------------
 
@@ -121,7 +128,7 @@ app_license = "mit"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Car Listing": "car_market.car_market.doctype.car_listing.car_listing.get_permission_query_conditions"
 # }
 #
 # has_permission = {
@@ -133,10 +140,8 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+# 	"Car Listing": {
+# 		"on_update": "car_market.car_market.doctype.car_listing.car_listing.on_update",
 # 	}
 # }
 

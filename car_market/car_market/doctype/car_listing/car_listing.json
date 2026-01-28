@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-04 16:31:06.720958",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "car_listing",
+  "listing_title",
+  "brand",
+  "model",
+  "produced_year",
+  "entered_year",
+  "condition",
+  "price",
+  "mileage",
+  "main_image",
+  "description",
+  "seller",
+  "avg_rating",
+  "review_count",
+  "gallery",
+  "color",
+  "workflow_state",
+  "rejected_reason",
+  "amended_from",
+  "payment_state",
+  "type",
+  "image_preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Car Brand"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Car Model"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Link",
+   "label": "Condition",
+   "options": "Car Condition"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Int",
+   "label": "Mileage",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "seller",
+   "fieldtype": "Link",
+   "label": "Seller",
+   "options": "Seller"
+  },
+  {
+   "description": "auto culculated",
+   "fieldname": "avg_rating",
+   "fieldtype": "Float",
+   "label": "Average Rating",
+   "non_negative": 1
+  },
+  {
+   "description": "auto culculated",
+   "fieldname": "review_count",
+   "fieldtype": "Int",
+   "label": "Review Count",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "gallery",
+   "fieldtype": "Table",
+   "label": "Gallery",
+   "options": "Car Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "car_listing",
+   "fieldtype": "Section Break",
+   "label": "Car Listing"
+  },
+  {
+   "fieldname": "listing_title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "produced_year",
+   "fieldtype": "Int",
+   "label": "Produced year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "entered_year",
+   "fieldtype": "Int",
+   "label": "Entered year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "main_image",
+   "fieldtype": "Attach Image",
+   "label": "Main Image"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending\nApproved\nRejected\nCancel Request\nCanceled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejected reason",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Car Listing",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "UNPAID",
+   "fieldname": "payment_state",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "PAID\nUNPAID"
+  },
+  {
+   "default": "Simple",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Simple\nFeatured"
+  },
+  {
+   "fieldname": "image_preview",
+   "fieldtype": "HTML",
+   "label": "Image preview"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-23 16:47:52.630123",
+ "modified_by": "Administrator",
+ "module": "Car Market",
+ "name": "Car Listing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Marketplace Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Car Seller",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Marketplace Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "listing_title"
+}
